@@ -7,11 +7,6 @@ const lightboxImage = document.querySelector('.lightbox__image');
 
 let imgPos = 0;
 
-export function setImageIndex(index) {
-  imgPos = index;
-  updateModal();
-}
-
 function updateModal(){
 	const {original, description} = galleryItems[imgPos];
 	lightboxImage.src = original;
