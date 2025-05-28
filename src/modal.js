@@ -1,3 +1,6 @@
+import { setImageIndex } from './slider.js';
+import { galleryItems } from './galleryItems.js';
+
 const galleryContainer = document.querySelector('.js-gallery');
 const lightbox = document.querySelector('.js-lightbox');
 const lightboxImage = document.querySelector('.lightbox__image');
@@ -16,6 +19,12 @@ function openModalWindow(src, alt){
 	lightbox.classList.add('is-open');
 	lightboxImage.src = src;
 	lightboxImage.alt = alt;
+	
+  	const clickedImg = target.dataset.source;
+  	const index = galleryItems.findIndex(item => item.original === clickedImg);
+	setImageIndex(index);
+}
+	
 }
 function closeModalWindow(){
 	lightbox.classList.remove('is-open');
