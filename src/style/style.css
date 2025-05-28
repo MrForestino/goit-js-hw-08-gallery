@@ -149,7 +149,7 @@ body {
   width: 100px;
   height: 100px;
   cursor: pointer;
-  background: url('./src/images/right-arrow.png') no-repeat center / cover;
+  background: url('../images/right-arrow.png') no-repeat center / cover;
   outline: none;
   user-select: none;
 }
