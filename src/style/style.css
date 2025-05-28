@@ -96,6 +96,12 @@ body {
 .lightbox__content {
   transform: scale(0.95);
   transition: transform var(--animation-duration) var(--timing-function);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 .lightbox.is-open .lightbox__content {
@@ -137,4 +143,26 @@ body {
 .lightbox__button:hover,
 .lightbox__button:focus {
   background-color: rgba(0, 0, 0, 0.5);
+}
+.arrow-left, .arrow-right{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background: url('/src/images/right-arrow.png') no-repeat center / cover;
+  outline: none;
+  user-select: none;
+}
+.arrow-left {
+  left: 20px;
+  top: 50%;
+transform: translateY(-50%) scaleX(-1);
+  z-index: 10;
+}
+
+.arrow-right {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
